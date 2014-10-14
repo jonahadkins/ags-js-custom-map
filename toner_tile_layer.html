@@ -21,8 +21,8 @@
     <script src="http://js.arcgis.com/3.11/"></script>
     <script>
     // [Sample] Insert This For Web Tile Layer
-    var map;
-      require(["esri/map", "esri/layers/WebTiledLayer", "dojo/parser", "dojo/domReady!"],
+   var map;
+     require(["esri/map", "esri/layers/WebTiledLayer", "dojo/parser", "dojo/domReady!"],
       function(Map, WebTiledLayer, parser) {
         parser.parse();
         map = new Map("map", {
@@ -34,8 +34,8 @@
           "id": "Toner",
           "subDomains": ["a", "b", "c"]
         });
-        map.addLayer(customMap);
-      });
+        //map.addLayer(customMap);
+      //});
     // This is the basic js api map call  
     //  var map;
 
