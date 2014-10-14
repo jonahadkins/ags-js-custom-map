@@ -28,6 +28,8 @@
           center: [-76.386, 37.040], // longitude, latitude
           zoom: 10
         });
+        var baseMapLayer = new esri.layers.ArcGISTiledMapServiceLayer("http://gismaps.vita.virginia.gov/arcgis/rest/services/MostRecentImagery/MostRecentImagery_WGS/MapServer");
+        map.addLayer(baseMapLayer);
       });
     </script>
   </head>
