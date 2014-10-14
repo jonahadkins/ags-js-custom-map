@@ -2,7 +2,7 @@ Custom Maps With The ArGIS JS API
 =================
 
 This is a quick write-up on extending the standard ArcGIS Javascript API to include calls to
-3 types of customized basemaps.  
+3 types of customized basemaps. [Spoiler Alert] I'm not a developer.
 
 =================
 
