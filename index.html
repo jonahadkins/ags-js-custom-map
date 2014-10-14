@@ -31,7 +31,7 @@
         });
         // [Sample] Use This For Inserting A Map Service Layer
         //var baseMapLayer = new esri.layers.ArcGISTiledMapServiceLayer("http://gismaps.vita.virginia.gov/arcgis/rest/services/MostRecentImagery/MostRecentImagery_WGS/MapServer");
-        var baseMapLayer = new esri.layers.ArcGISTiledMapServiceLayer("http://{s}.sm.mapstack.stamen.com/($375a80[@60p],(naip,$2c235c[hsl-color@70])[darker],(toner-labels,$000[@20],$38315f[hsl-color])[@50])/{z}/{x}/{y}.png");
+        var baseMapLayer = new esri.layers.ArcGISTiledMapServiceLayer("http://{subdomain}.sm.mapstack.stamen.com/($375a80[@60p],(naip,$2c235c[hsl-color@70])[darker],(toner-labels,$000[@20],$38315f[hsl-color])[@50])/{level}/{col}/{row}.png");
         map.addLayer(baseMapLayer);
       });
     </script>
