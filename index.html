@@ -20,15 +20,6 @@
     </style>
     <script src="http://js.arcgis.com/3.11/"></script>
     <script>
-       // [Sample]
-        var mapid="df64031882e74a8db5fa5a94b3f25415"
-        var mapDeferred = esri.arcgis.utils.createMap(mapid, "map", {
-        mapOptions: {
-        slider: true,
-        nav:false
-      }
-    });
-      
       
       var map;
 
@@ -40,7 +31,8 @@
         });
         // [Sample] Use This For Inserting A Map Service Layer
         //var baseMapLayer = new esri.layers.ArcGISTiledMapServiceLayer("http://gismaps.vita.virginia.gov/arcgis/rest/services/MostRecentImagery/MostRecentImagery_WGS/MapServer");
-        //map.addLayer(baseMapLayer);
+        var baseMapLayer = new esri.layers.ArcGISTiledMapServiceLayer("http://{s}.sm.mapstack.stamen.com/($375a80[@60p],(naip,$2c235c[hsl-color@70])[darker],(toner-labels,$000[@20],$38315f[hsl-color])[@50])/{z}/{x}/{y}.png");
+        map.addLayer(baseMapLayer);
       });
     </script>
   </head>
