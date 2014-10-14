@@ -38,10 +38,10 @@ This example includes tiled layers brought over from Stamen Design's cool [MapSt
 
 =================  
 
-###Using a Map Server  
-Extending your local ArcGIS Server instance to the ArcGIS Online infastructure provides the ablilty
-to share your created map tiles as map service. This implementation is fairly straight forward and
-requires access to a shared map service like the [Most Recent Virginia Imagery](http://www.arcgis.com/home/item.html?id=7780125c142c450cb8f6b4db4d121806) service provided by VGIN.
+###Using ArcGIS Server or an AGOL Map Service
+You can use your public ArcGIS Server instance, or one that is hosted in ArcGIS Online to implement
+a custom basemap in the ArcGIS JS API. This method is fairly straight forward and
+requires access to a public map service like the [Most Recent Virginia Imagery](http://www.arcgis.com/home/item.html?id=7780125c142c450cb8f6b4db4d121806) service provided by VGIN.
 What we look for in this case is the map server address, which usually looks like:  
 
 `http://gismaps.vita.virginia.gov/arcgis/rest/services/MostRecentImagery/MostRecentImagery_WGS/MapServer`  
