@@ -20,24 +20,23 @@
     </style>
     <script src="http://js.arcgis.com/3.11/"></script>
     <script>
-    
+    // [Sample] Insert This For Web Tile Layer
     var map;
       require(["esri/map", "esri/layers/WebTiledLayer", "dojo/parser", "dojo/domReady!"],
       function(Map, WebTiledLayer, parser) {
         parser.parse();
         map = new Map("map", {
-          center: [-89.985, 29.822],
-          zoom: 8
+          center: [-76.386, 37.040],
+          zoom: 10
         });
-
-        var customMap = new WebTiledLayer("http://${subDomain}.tile.opencyclemap.org/cycle/${level}/${col}/${row}.png", {
+        var customMap = new WebTiledLayer("http://${subDomain}.tile.stamen.com/toner/${level}/${col}/${row}.png", {
           "copyright": 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.',
           "id": "Toner",
           "subDomains": ["a", "b", "c"]
         });
         map.addLayer(customMap);
       });
-      
+    // This is the basic js api map call  
     //  var map;
 
     //  require(["esri/map", "dojo/domReady!"], function(Map) {
