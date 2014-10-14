@@ -22,26 +22,20 @@
     <script>
     
     var map;
-      require([
-        "esri/map", "esri/layers/WebTiledLayer", "dojo/parser",
-        
-        "dijit/layout/BorderContainer", "dijit/layout/ContentPane", "dojo/domReady!"
-      ], function(
-        Map, WebTiledLayer, parser
-      ) {
+      require(["esri/map", "esri/layers/WebTiledLayer", "dojo/parser", "dojo/domReady!"],
+      function(Map, WebTiledLayer, parser) {
         parser.parse();
-
         map = new Map("map", {
           center: [-89.985, 29.822],
           zoom: 8
         });
 
-        var cycleMap = new WebTiledLayer("http://${subDomain}.tile.opencyclemap.org/cycle/${level}/${col}/${row}.png", {
+        var customMap = new WebTiledLayer("http://${subDomain}.tile.opencyclemap.org/cycle/${level}/${col}/${row}.png", {
           "copyright": "Open Cycle Map",
           "id": "Open Cycle Map",
           "subDomains": ["a", "b", "c"]
         });
-        map.addLayer(cycleMap);
+        map.addLayer(customMap);
       });
       
     //  var map;
