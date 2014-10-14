@@ -19,17 +19,12 @@
       }
     </style>
     <script src="http://js.arcgis.com/3.11/"></script>
-    <script>
+    <script></script>
     
-    var mapid="df64031882e74a8db5fa5a94b3f25415"
-   var mapDeferred = esri.arcgis.utils.createMap(mapid, "map", {
-      mapOptions: {
-        slider: true,
-        nav:false
-      }
-    });
+     var baseMapLayer = new esri.layers.ArcGISTiledMapServiceLayer("http://www.arcgis.com/home/webmap/viewer.html?webmap=df64031882e74a8db5fa5a94b3f25415");
+    map.addLayer(baseMapLayer);
     
-      var map;
+    var map;
 
       require(["esri/map", "dojo/domReady!"], function(Map) {
         map = new Map("map", {
