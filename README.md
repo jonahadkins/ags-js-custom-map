@@ -104,28 +104,3 @@ Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http:
 Feel free to give me a shout on Twitter [@jonahadkins](https://twitter.com/jonahadkins) for any comments or questions. And please fork to add any missing info or lessons learned.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[Spoiler Alert] Written by a non-developer [/Spoiler Alert] 
