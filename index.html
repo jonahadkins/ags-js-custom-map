@@ -20,6 +20,15 @@
     </style>
     <script src="http://js.arcgis.com/3.11/"></script>
     <script>
+    
+    var mapid="df64031882e74a8db5fa5a94b3f25415"
+   var mapDeferred = esri.arcgis.utils.createMap(mapid, "map", {
+      mapOptions: {
+        slider: true,
+        nav:false
+      }
+    });
+    
       var map;
 
       require(["esri/map", "dojo/domReady!"], function(Map) {
