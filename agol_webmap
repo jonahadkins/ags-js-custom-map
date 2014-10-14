@@ -1,0 +1,36 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <title>Create a Web Map</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.11/esri/css/esri.css">
+  <style>
+    html,body,#mapDiv,.map.container{
+      padding:0;
+      margin:0;
+      height:100%;
+    }
+  </style>
+
+  <script>var dojoConfig = { parseOnLoad:true };</script>
+  <script src="http://js.arcgis.com/3.11compact/"></script>
+  <script>
+    var map;
+    require([
+      "esri/map",
+      "esri/arcgis/utils",
+      "dojo/domReady!"
+      ], function(Map, arcgisUtils){
+      arcgisUtils.createMap(df64031882e74a8db5fa5a94b3f25415, "mapDiv").then(function (response) {
+          map = response.map;   
+      });
+  });
+  </script>
+  </head>
+
+  <body>
+    <div id="mapDiv"></div>
+  </body>
+  </html>
