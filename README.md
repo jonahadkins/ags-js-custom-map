@@ -22,7 +22,7 @@ You'll want to grab everything after webmap=, which in this case is **df64031882
 Code:  
 ```javascript
 var map;  
-    require([  
+require([  
       "esri/map",  
       "esri/arcgis/utils",  
       "dojo/domReady!"  
@@ -30,7 +30,7 @@ var map;
       arcgisUtils.createMap("df64031882e74a8db5fa5a94b3f25415", "mapDiv").then(function (response) {
           map = response.map;
       });
-  });
+});
   ```  
 This example includes tiled layers brought over from Stamen Design's cool [MapStack](http://mapstack.stamen.com/) service, which was then saved as an AGOL webmap.
 
@@ -49,17 +49,17 @@ What we look for in this case is the map server address, which usually looks lik
 Code:
 ```javascript
 var map;
-     require(["esri/map", "dojo/domReady!"], function(Map) {
-     map = new Map("map", {
-    basemap: "topo",
-    center: [-76.386, 37.040], // longitude, latitude
+require(["esri/map", "dojo/domReady!"], function(Map) {
+    map = new Map("map", {
+        basemap: "topo",
+        center: [-76.386, 37.040], // longitude, latitude
         zoom: 10
-        });
-        // Adding A New Basemap From An Existing Rest/Map Service
-        var baseMapLayer = new esri.layers.ArcGISTiledMapServiceLayer
+    });
+    // Adding A New Basemap From An Existing Rest/Map Service
+    var baseMapLayer = new esri.layers.ArcGISTiledMapServiceLayer
         ("http://gismaps.vita.virginia.gov/arcgis/rest/services/MostRecentImagery/MostRecentImagery_WGS/MapServer");
-        map.addLayer(baseMapLayer);
-        });
+    map.addLayer(baseMapLayer);
+});
 ```  
 **Live Sample [AGOL Map Service with ArcGIS JS API](http://jonahadkins.github.io/ags-js-custom-map/custom_map_service.html)**  
 
@@ -77,21 +77,21 @@ It's a standard setup with the tile subdomain listed as `d` and the `14/2626/633
 Code:  
 
 ```javascript
-   var map;
-     require(["esri/map", "esri/layers/WebTiledLayer", "dojo/parser", "dojo/domReady!"],
-      function(Map, WebTiledLayer, parser) {
-        parser.parse();
-        map = new Map("map", {
+var map;
+require(["esri/map", "esri/layers/WebTiledLayer", "dojo/parser", "dojo/domReady!"],
+    function(Map, WebTiledLayer, parser) {
+    parser.parse();
+    map = new Map("map", {
           center: [-76.386, 37.040],
           zoom: 10
-        });
-        var customMap = new WebTiledLayer("http://${subDomain}.tile.stamen.com/toner/${level}/${col}/${row}.png", {
+    });
+    var customMap = new WebTiledLayer("http://${subDomain}.tile.stamen.com/toner/${level}/${col}/${row}.png", {
           "copyright": 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.',
           "id": "Toner",
           "subDomains": ["a", "b", "c"]
-        });
-        map.addLayer(customMap);
-      });
+    });
+    map.addLayer(customMap);
+});
 ```  
 **Live Sample [Web Tile Layer with ArcGIS JS API](http://jonahadkins.github.io/ags-js-custom-map/toner_tile_layer.html)**
 
