@@ -1,4 +1,4 @@
-Custom Maps With The ArGIS JS API
+Custom Maps With Esri's ArcGIS JS API
 =================
 
 This is a quick write-up on extending the standard ArcGIS Javascript API to include calls to
@@ -8,15 +8,15 @@ This is a quick write-up on extending the standard ArcGIS Javascript API to incl
 
 ###Using an Esri Web Map  
 Through your ArcGIS Online account, you can create any number of styled maps using a combination
-of Esri Basemaps, Services and Layers hosted in the AGOL infastructure. Those can also be
-customized to include a tiled map service from an non-Esri provider. Lots of details on that
-can be found in a previous write-up: **[Custom Basemaps In ArcGIS Online](https://github.com/jonahadkins/Custom-Basemaps-In-AGOL)**. Using an AGOL Web Map requires
-a valid webmap id that has been shared publicly from your AGOL account. If you navigate to your
-webmap in your browser the webmap id can be copied from the url:  
+of Esri basemaps, services and layers hosted in the AGOL infastructure. Those can also be
+customized to include a tiled map service from a non-Esri provider. Lots of details on that
+can be found in a previous write-up: **[Custom Basemaps In ArcGIS Online](https://github.com/jonahadkins/Custom-Basemaps-In-AGOL)**. Using an AGOL web map requires
+a valid web map id; this example also assumes that the web map has been shared publically. If you navigate to your
+web map in your browser the web map id can be copied from the url:  
 
 `http://www.arcgis.com/home/webmap/viewer.html?webmap=df64031882e74a8db5fa5a94b3f25415`
 
-You'll want to grab everything after webmap=, which in this case is **df64031882e74a8db5fa5a94b3f25415**
+You'll want to grab everything after `webmap=`, which in this case is **df64031882e74a8db5fa5a94b3f25415**
 
 
 Code:  
@@ -32,7 +32,7 @@ require([
       });
 });
   ```  
-This example includes tiled layers brought over from Stamen Design's cool [MapStack](http://mapstack.stamen.com/) service, which was then saved as an AGOL webmap.
+This example includes tiled layers brought over from Stamen Design's cool [MapStack](http://mapstack.stamen.com/) service, which was then saved as an AGOL web map.
 
 **Live Sample: [AGOL Webmap with ArcGIS JS API](http://jonahadkins.github.io/ags-js-custom-map/agol_webmap.html)**  
 
@@ -101,6 +101,6 @@ Always remember to include attribution when it's required. For using Toner, incl
 Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>
 ```
 
-Feel free to give me a shout on Twitter [@jonahadkins](https://twitter.com/jonahadkins) for any comments or questions. And please fork to add any missing info or lessons learned.
+Feel free to give me a shout on Twitter [@jonahadkins](https://twitter.com/jonahadkins) for any comments or questions. Please fork to add any missing info or lessons learned.
 
 
