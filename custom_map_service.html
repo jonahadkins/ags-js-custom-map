@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no"/>
+    <title>Stamen Toner With ArcGIS JS API</title>
+    <link rel="stylesheet" href="http://js.arcgis.com/3.11/esri/css/esri.css">
+    <style>
+      html, body, #map {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #FFF;
+        overflow: hidden;
+        font-family: "Trebuchet MS";
+      }
+    </style>
+    <script src="http://js.arcgis.com/3.11/"></script>
+    <script>
+    // This is the basic js api map call  
+     var map;
+     require(["esri/map", "dojo/domReady!"], function(Map) {
+     map = new Map("map", {
+    basemap: "topo",
+    center: [-76.386, 37.040], // longitude, latitude
+        zoom: 10
+        });
+        // [Sample] Use This For Inserting A Map Service Layer
+        var baseMapLayer = new esri.layers.ArcGISTiledMapServiceLayer("http://gismaps.vita.virginia.gov/arcgis/rest/services/MostRecentImagery/MostRecentImagery_WGS/MapServer");
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="map"></div>
+  </body>
+</html>
